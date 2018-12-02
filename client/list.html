@@ -1,0 +1,17 @@
+<template name="list">
+    <ul>
+    {{#each listing}}
+        <li>
+        {{#if checked}}
+            <input class="user-update" value={{username}}>
+            <button class="validate">valider</button>
+            {{else}}
+                {{ username}}
+                <button class="modif">modifier</button>
+        {{/if}}
+        <input class="toggle" type="hidden" value={{checked}}>
+        <button class="remove">remove</button>
+        </li>
+    {{/each}}
+    </ul>
+</template>
